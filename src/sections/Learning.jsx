@@ -6,21 +6,21 @@ import { learningDashboard } from '../data/portfolio.js';
 import { fadeUp } from '../animations/motion.js';
 
 export default function Learning() {
-  const maxHours = Math.max(...learningDashboard.codingTracker.map((item) => item.hours));
+  const maxSessions = Math.max(...learningDashboard.codingTracker.map((item) => item.sessions), 1);
 
   return (
     <SectionShell
       id="learning"
       eyebrow="Daily Learning Dashboard"
-      title="A maintainable cockpit for continuous embedded growth."
-      subtitle="The dashboard is intentionally data-driven in src/data/portfolio.js so daily notes, heatmap intensity, coding hours, and weekly analytics are easy to update."
+      title="365 Days Embedded Challenge tracker."
+      subtitle="This dashboard is intentionally data-driven. Update one small file after each daily session and the portfolio reflects the latest completed day."
     >
       <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
         <motion.div className="panel-surface" variants={fadeUp}>
           <div className="mb-5 flex items-center justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.26em] text-cyanCore">Contribution signal</p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-white">GitHub-style Heatmap</h3>
+              <h3 className="mt-2 font-display text-2xl font-bold text-white">Challenge Heatmap</h3>
             </div>
             <Activity className="text-cyanCore" size={24} />
           </div>
@@ -40,12 +40,14 @@ export default function Learning() {
           <div className="flex items-center justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.26em] text-matrix">Streak tracker</p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-white">{learningDashboard.streak} days</h3>
+              <h3 className="mt-2 font-display text-2xl font-bold text-white">
+                Day {learningDashboard.completedDays} / {learningDashboard.totalDays}
+              </h3>
             </div>
             <CalendarClock className="text-matrix" size={26} />
           </div>
           <div className="mt-6 rounded border border-matrix/25 bg-matrix/10 p-4 font-mono text-sm text-matrix">
-            Today signal: firmware practice online
+            {learningDashboard.currentFocus}
           </div>
           <div className="mt-5 space-y-3">
             {learningDashboard.today.map((item) => (
@@ -62,7 +64,7 @@ export default function Learning() {
           <div className="mb-5 flex items-center justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.26em] text-cyanCore">Weekly analytics</p>
-              <h3 className="mt-2 font-display text-xl font-bold text-white">Skill Growth Channels</h3>
+              <h3 className="mt-2 font-display text-xl font-bold text-white">Challenge Progress</h3>
             </div>
             <TrendingUp className="text-cyanCore" size={23} />
           </div>
@@ -90,7 +92,7 @@ export default function Learning() {
           <div className="mb-5 flex items-center justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.26em] text-matrix">Daily coding tracker</p>
-              <h3 className="mt-2 font-display text-xl font-bold text-white">Hours Logged</h3>
+              <h3 className="mt-2 font-display text-xl font-bold text-white">Sessions Completed</h3>
             </div>
             <BookOpenCheck className="text-matrix" size={23} />
           </div>
@@ -100,7 +102,7 @@ export default function Learning() {
                 <motion.div
                   className="w-full rounded-t bg-gradient-to-t from-cyanCore/45 to-matrix shadow-green"
                   initial={{ height: 0 }}
-                  whileInView={{ height: `${(item.hours / maxHours) * 100}%` }}
+                  whileInView={{ height: `${Math.max(8, (item.sessions / maxSessions) * 100)}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.75, ease: 'easeOut' }}
                 />
@@ -108,6 +110,9 @@ export default function Learning() {
               </div>
             ))}
           </div>
+          <p className="mt-5 rounded border border-cyanCore/15 bg-cyanCore/5 p-3 font-mono text-xs leading-6 text-slate-400">
+            {learningDashboard.updateHint}
+          </p>
         </motion.div>
       </div>
     </SectionShell>

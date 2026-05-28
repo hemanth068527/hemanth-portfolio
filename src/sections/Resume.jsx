@@ -40,14 +40,14 @@ export default function Resume() {
 
         <motion.div className="panel-surface" variants={fadeUp}>
           <p className="font-mono text-xs uppercase tracking-[0.26em] text-matrix">Technical summary</p>
-          <h3 className="mt-3 font-display text-2xl font-bold text-white">Firmware Internship Readiness</h3>
+          <h3 className="mt-3 font-display text-2xl font-bold text-white">Embedded Learning Readiness</h3>
           <p className="mt-4 leading-8 text-slate-300">
-            Hemanth is positioning around C fundamentals, embedded driver simulations, communication protocols,
-            GitHub-public learning, and RTOS concepts. The resume should emphasize deterministic thinking, debugging
-            discipline, and clear documentation of learning projects.
+            Hemanth is currently building the foundation: daily C practice, a 365-day embedded challenge, public
+            GitHub learning logs, and a roadmap toward microcontroller and firmware projects. The resume should
+            emphasize consistency, curiosity, and clear documentation of daily progress.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {['C fundamentals', 'Protocol labs', 'RTOS basics', 'Linux workflow'].map((item) => (
+            {['C fundamentals', '365-day challenge', 'Daily notes', 'Firmware roadmap'].map((item) => (
               <span key={item} className="skill-pill">
                 {item}
               </span>

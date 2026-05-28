@@ -24,13 +24,14 @@ import {
   Timer,
   Zap,
 } from 'lucide-react';
+import { embeddedChallenge } from './dailyLearning.js';
 
 export const bootLogs = [
   '[BOOT] Initializing Embedded Systems Portfolio...',
   '[CLK] Calibrating cybernetic timing source: 168 MHz',
   '[MEM] Mapping firmware modules to protected memory',
-  '[BUS] Loading UART, SPI, I2C telemetry interfaces',
-  '[RTOS] Checking scheduler queues and interrupt vectors',
+  '[LOG] Loading 365-day embedded challenge tracker',
+  '[C] Mounting daily C practice workspace',
   '[PCB] Energizing holographic trace layer',
   '[SYS] System Status: ONLINE',
 ];
@@ -55,17 +56,17 @@ export const heroActions = [
 ];
 
 export const profileStats = [
-  { label: 'GitHub commits', value: 365, suffix: '+', icon: Github },
-  { label: 'Projects completed', value: 7, suffix: '', icon: Boxes },
-  { label: 'Learning streak', value: 120, suffix: ' days', icon: Zap },
-  { label: 'Coding hours', value: 640, suffix: '+', icon: Timer },
+  { label: 'Challenge day', value: embeddedChallenge.completedDays, suffix: '/365', icon: Github },
+  { label: 'Daily logs', value: embeddedChallenge.dailyLog.length, suffix: '', icon: Boxes },
+  { label: 'Learning streak', value: embeddedChallenge.completedDays, suffix: ' days', icon: Zap },
+  { label: 'Roadmap target', value: embeddedChallenge.totalDays, suffix: ' days', icon: Timer },
 ];
 
 export const currentlyLearning = [
-  { label: 'RTOS task scheduling', progress: 64 },
-  { label: 'Bare-metal ARM startup code', progress: 58 },
-  { label: 'Linux device-driver basics', progress: 42 },
-  { label: 'Protocol debugging', progress: 72 },
+  { label: 'Daily C practice habit', progress: 5 },
+  { label: 'Embedded fundamentals roadmap', progress: 4 },
+  { label: 'GitHub learning logs', progress: 5 },
+  { label: 'Microcontroller basics preparation', progress: 2 },
 ];
 
 export const skillGroups = [
@@ -74,9 +75,9 @@ export const skillGroups = [
     icon: Braces,
     accent: 'cyan',
     skills: [
-      { name: 'C', level: 82 },
-      { name: 'Embedded C', level: 76 },
-      { name: 'Python Basics', level: 48 },
+      { name: 'C', level: 12 },
+      { name: 'Embedded C', level: 5 },
+      { name: 'Python Basics', level: 8 },
     ],
   },
   {
@@ -84,15 +85,15 @@ export const skillGroups = [
     icon: Cpu,
     accent: 'green',
     skills: [
-      { name: 'UART', level: 78 },
-      { name: 'SPI', level: 62 },
-      { name: 'I2C', level: 64 },
-      { name: 'GPIO', level: 84 },
-      { name: 'Timers', level: 70 },
-      { name: 'Interrupts', level: 68 },
-      { name: 'RTOS', level: 48 },
-      { name: 'ARM Basics', level: 54 },
-      { name: 'Bare-metal programming', level: 66 },
+      { name: 'UART', level: 3 },
+      { name: 'SPI', level: 2 },
+      { name: 'I2C', level: 2 },
+      { name: 'GPIO', level: 3 },
+      { name: 'Timers', level: 2 },
+      { name: 'Interrupts', level: 2 },
+      { name: 'RTOS', level: 1 },
+      { name: 'ARM Basics', level: 2 },
+      { name: 'Bare-metal programming', level: 3 },
     ],
   },
   {
@@ -100,22 +101,22 @@ export const skillGroups = [
     icon: MonitorCog,
     accent: 'plasma',
     skills: [
-      { name: 'Git', level: 72 },
-      { name: 'GitHub', level: 74 },
-      { name: 'Linux', level: 62 },
-      { name: 'VS Code', level: 80 },
-      { name: 'CodeBlocks', level: 68 },
+      { name: 'Git', level: 18 },
+      { name: 'GitHub', level: 22 },
+      { name: 'Linux', level: 8 },
+      { name: 'VS Code', level: 30 },
+      { name: 'CodeBlocks', level: 18 },
     ],
   },
 ];
 
 export const radarSkills = [
-  { axis: 'Embedded C', value: 76 },
-  { axis: 'Debugging', value: 70 },
-  { axis: 'Protocols', value: 68 },
-  { axis: 'Linux', value: 62 },
-  { axis: 'RTOS', value: 48 },
-  { axis: 'Git', value: 72 },
+  { axis: 'C Basics', value: 12 },
+  { axis: 'Debugging', value: 8 },
+  { axis: 'Protocols', value: 3 },
+  { axis: 'Linux', value: 8 },
+  { axis: 'RTOS', value: 1 },
+  { axis: 'Git', value: 18 },
 ];
 
 export const projectCategories = ['All', 'C Programming', 'Firmware', 'RTOS', 'Protocols'];
@@ -124,12 +125,12 @@ export const projects = [
   {
     title: 'C Practice 365',
     category: 'C Programming',
-    summary: 'A disciplined daily C programming archive focused on pointers, arrays, strings, bitwise logic, and problem solving.',
+    summary: 'A newly started 365-day embedded learning challenge. Currently completed 5 days and updating the log daily.',
     tech: ['C', 'Git', 'Linux'],
-    difficulty: 'Intermediate',
+    difficulty: 'Beginner',
     status: 'Active',
-    timeline: '365 day roadmap',
-    stats: { files: 365, lines: '18k+', commits: '365+' },
+    timeline: 'Day 5 of 365',
+    stats: { files: 5, lines: 'Daily log', commits: '5+' },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xC365',
@@ -137,12 +138,12 @@ export const projects = [
   {
     title: 'Number Manipulation Programs',
     category: 'C Programming',
-    summary: 'Optimized arithmetic routines covering digit extraction, reverse, palindrome, Armstrong checks, and base conversions.',
+    summary: 'Planned C practice module for number logic, digit operations, and clean command-line programs.',
     tech: ['C', 'Math', 'CLI'],
-    difficulty: 'Beginner+',
-    status: 'Stable',
-    timeline: '2 weeks',
-    stats: { files: 24, lines: '1.9k', commits: 41 },
+    difficulty: 'Beginner',
+    status: 'Roadmap',
+    timeline: 'Upcoming',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xNUM',
@@ -150,12 +151,12 @@ export const projects = [
   {
     title: 'Prime Number Checker',
     category: 'C Programming',
-    summary: 'A compact prime validation module with time-complexity notes and clean terminal input handling.',
+    summary: 'Upcoming beginner C program for understanding loops, conditions, and simple algorithm thinking.',
     tech: ['C', 'Algorithms'],
     difficulty: 'Beginner',
-    status: 'Complete',
-    timeline: '3 days',
-    stats: { files: 6, lines: 420, commits: 14 },
+    status: 'Roadmap',
+    timeline: 'Upcoming',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xPRM',
@@ -163,12 +164,12 @@ export const projects = [
   {
     title: 'LCM Calculator',
     category: 'C Programming',
-    summary: 'LCM and GCD calculator demonstrating modular functions, validation, and reusable number theory utilities.',
+    summary: 'Upcoming C practice program for functions, math logic, validation, and reusable code structure.',
     tech: ['C', 'CLI', 'Testing'],
     difficulty: 'Beginner',
-    status: 'Complete',
-    timeline: '2 days',
-    stats: { files: 5, lines: 360, commits: 10 },
+    status: 'Roadmap',
+    timeline: 'Upcoming',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xLCM',
@@ -176,12 +177,12 @@ export const projects = [
   {
     title: 'Embedded Driver Simulations',
     category: 'Firmware',
-    summary: 'Register-level driver simulations for GPIO, timers, and interrupt-style callbacks before moving to physical boards.',
+    summary: 'Future milestone for the challenge after C fundamentals become stronger.',
     tech: ['Embedded C', 'Registers', 'GPIO'],
-    difficulty: 'Advanced',
-    status: 'Prototype',
-    timeline: '4 weeks',
-    stats: { files: 18, lines: '3.4k', commits: 73 },
+    difficulty: 'Future',
+    status: 'Roadmap',
+    timeline: 'Later milestone',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xDRV',
@@ -189,12 +190,12 @@ export const projects = [
   {
     title: 'UART Communication Demo',
     category: 'Protocols',
-    summary: 'UART packet simulation with baud-rate framing, parity notes, transmit buffers, and serial console diagnostics.',
+    summary: 'Future protocol learning project planned for the embedded systems roadmap.',
     tech: ['UART', 'Embedded C', 'Linux'],
-    difficulty: 'Intermediate',
-    status: 'Active',
-    timeline: '3 weeks',
-    stats: { files: 14, lines: '2.2k', commits: 52 },
+    difficulty: 'Future',
+    status: 'Roadmap',
+    timeline: 'Later milestone',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xUART',
@@ -202,46 +203,48 @@ export const projects = [
   {
     title: 'Mini RTOS Scheduler',
     category: 'RTOS',
-    summary: 'A learning scheduler that models task states, cooperative switching, tick timing, and priority experiments.',
+    summary: 'Long-term roadmap project after C, data structures, timers, and embedded basics are stronger.',
     tech: ['C', 'RTOS', 'Schedulers'],
-    difficulty: 'Advanced',
-    status: 'Research',
-    timeline: '6 weeks',
-    stats: { files: 21, lines: '4.1k', commits: 84 },
+    difficulty: 'Future',
+    status: 'Roadmap',
+    timeline: 'Long-term',
+    stats: { files: 0, lines: 'Planned', commits: 0 },
     github: 'https://github.com/',
     preview: '#',
     signal: '0xRTOS',
   },
 ];
 
-export const contributionLevels = [
-  1, 3, 2, 4, 0, 2, 1, 2, 4, 3, 1, 0, 2, 3, 4, 1, 2, 2, 4, 3, 0, 1, 3, 4,
-  2, 1, 0, 3, 2, 4, 4, 2, 1, 3, 0, 2, 3, 4, 1, 2, 4, 3, 1, 0, 2, 3, 4, 4,
-  2, 1, 3, 2, 4, 0, 1, 3, 4, 2, 3, 1, 0, 4, 2, 3, 4, 1, 2, 3, 0, 4, 3, 2,
-  1, 4, 4, 2, 0, 1, 3, 2, 4, 3, 1, 0,
-];
+export const contributionLevels = Array.from({ length: 84 }, (_, index) =>
+  index < embeddedChallenge.completedDays ? 4 : 0,
+);
 
 export const learningDashboard = {
-  streak: 120,
-  today: [
-    'Refined pointer arithmetic notes with memory diagrams.',
-    'Simulated UART frame timing and parity fault handling.',
-    'Reviewed RTOS task states and cooperative scheduling tradeoffs.',
-  ],
+  title: embeddedChallenge.title,
+  completedDays: embeddedChallenge.completedDays,
+  totalDays: embeddedChallenge.totalDays,
+  progressPercent: Math.round((embeddedChallenge.completedDays / embeddedChallenge.totalDays) * 100),
+  streak: embeddedChallenge.completedDays,
+  currentFocus: embeddedChallenge.currentFocus,
+  updateHint: embeddedChallenge.updateHint,
+  today: embeddedChallenge.dailyLog
+    .slice(-3)
+    .reverse()
+    .map((entry) => `Day ${entry.day}: ${entry.note}`),
   weekly: [
-    { label: 'C drills', value: 91 },
-    { label: 'Firmware notes', value: 74 },
-    { label: 'Linux practice', value: 58 },
-    { label: 'Protocol labs', value: 67 },
+    { label: 'Challenge progress', value: Math.max(1, Math.round((embeddedChallenge.completedDays / embeddedChallenge.totalDays) * 100)) },
+    { label: '5-day consistency', value: 100 },
+    { label: 'Learning notes updated', value: 100 },
+    { label: 'Future embedded roadmap', value: 5 },
   ],
   codingTracker: [
-    { day: 'Mon', hours: 2.5 },
-    { day: 'Tue', hours: 3.1 },
-    { day: 'Wed', hours: 1.8 },
-    { day: 'Thu', hours: 3.6 },
-    { day: 'Fri', hours: 2.9 },
-    { day: 'Sat', hours: 4.2 },
-    { day: 'Sun', hours: 2.2 },
+    { day: 'D1', sessions: 1 },
+    { day: 'D2', sessions: 1 },
+    { day: 'D3', sessions: 1 },
+    { day: 'D4', sessions: 1 },
+    { day: 'D5', sessions: 1 },
+    { day: 'D6', sessions: 0 },
+    { day: 'D7', sessions: 0 },
   ],
 };
 
@@ -256,28 +259,26 @@ export const certificates = [
 export const timeline = [
   { title: 'Started C Programming', date: 'Foundation', detail: 'Built the core mental model for memory, functions, arrays, pointers, and command-line problem solving.', icon: Binary },
   { title: 'GitHub Portfolio Creation', date: 'Version Control', detail: 'Organized repositories, daily coding logs, and public engineering progress.', icon: Github },
-  { title: 'Embedded Systems Learning', date: 'Hardware Layer', detail: 'Moved from pure C to GPIO, timers, communication protocols, and low-level system thinking.', icon: Cpu },
-  { title: 'First Firmware Project', date: 'Driver Lab', detail: 'Created simulation-first firmware modules to understand register-level behavior and debugging flow.', icon: MemoryStick },
-  { title: 'RTOS Learning', date: 'Scheduler Layer', detail: 'Exploring tasks, ticks, state machines, priorities, and deterministic embedded design.', icon: Layers3 },
+  { title: '365 Days Embedded Challenge', date: 'Day 5', detail: 'Started the 365-day challenge and completed the first 5 daily learning sessions.', icon: Cpu },
+  { title: 'First Firmware Project', date: 'Roadmap', detail: 'Planned as a future milestone after C fundamentals and embedded basics are stronger.', icon: MemoryStick },
+  { title: 'RTOS Learning', date: 'Future Layer', detail: 'Long-term goal for the roadmap, not claimed as completed learning yet.', icon: Layers3 },
   { title: 'Internship Placeholder', date: 'Next Mission', detail: 'Targeting firmware, embedded Linux, driver, or microcontroller internship opportunities.', icon: ShieldCheck },
 ];
 
 export const githubAnalytics = {
   username: 'Hemanth-K',
-  streak: 120,
+  streak: embeddedChallenge.completedDays,
   languages: [
-    { name: 'C', value: 62, color: '#27e8ff' },
-    { name: 'Embedded C', value: 18, color: '#66ff99' },
-    { name: 'Python', value: 8, color: '#b46cff' },
-    { name: 'Shell', value: 7, color: '#f8d66d' },
-    { name: 'Docs', value: 5, color: '#ff6b9d' },
+    { name: 'C practice', value: 70, color: '#27e8ff' },
+    { name: 'Learning notes', value: 20, color: '#66ff99' },
+    { name: 'Portfolio', value: 10, color: '#b46cff' },
   ],
   repositories: [
-    { name: 'C-Embedded-365', description: 'Daily C and embedded practice archive.', icon: Braces, activity: 'Active' },
-    { name: 'Embedded-Projects', description: 'Microcontroller and firmware experiments.', icon: Cpu, activity: 'Building' },
-    { name: 'UART-Communication', description: 'Serial communication simulations and notes.', icon: Radio, activity: 'Active' },
-    { name: 'RTOS-Learning', description: 'Scheduler concepts, task states, timing labs.', icon: Layers3, activity: 'Research' },
-    { name: 'Linux-For-Embedded', description: 'Linux commands, build notes, device concepts.', icon: TerminalSquare, activity: 'Learning' },
+    { name: 'C-Embedded-365', description: 'Daily 365-day embedded learning challenge archive.', icon: Braces, activity: 'Day 5' },
+    { name: 'Embedded-Projects', description: 'Future microcontroller and firmware project roadmap.', icon: Cpu, activity: 'Roadmap' },
+    { name: 'UART-Communication', description: 'Future serial communication learning project.', icon: Radio, activity: 'Planned' },
+    { name: 'RTOS-Learning', description: 'Long-term RTOS learning roadmap.', icon: Layers3, activity: 'Future' },
+    { name: 'Linux-For-Embedded', description: 'Future Linux notes for embedded development.', icon: TerminalSquare, activity: 'Planned' },
     { name: 'Portfolio-Website', description: 'Personal engineering operating system UI.', icon: DatabaseZap, activity: 'Live' },
   ],
 };
@@ -291,8 +292,8 @@ export const contactChannels = [
 
 export const terminalCommands = {
   help: 'Available: help, skills, projects, github, resume, contact, clear',
-  skills: 'C | Embedded C | UART | SPI | I2C | GPIO | Timers | Interrupts | RTOS | Linux | Git',
-  projects: 'C Practice 365, Driver Simulations, UART Demo, Mini RTOS Scheduler and more.',
+  skills: 'Currently building C basics, GitHub learning logs, and the 365-day embedded challenge habit.',
+  projects: 'Active: C Practice 365. Roadmap: number programs, GPIO, UART, RTOS after fundamentals.',
   github: 'Open the GitHub dashboard section or connect repositories in src/data/portfolio.js.',
   resume: 'Resume preview is available in the Resume section. Replace /resume-hemanth-k.pdf with the final PDF.',
   contact: 'Email: hemanth.k@example.com | LinkedIn and GitHub links are wired in contactChannels.',
@@ -300,18 +301,18 @@ export const terminalCommands = {
 
 export const dashboardSignals = [
   { label: 'MCU Core', value: 'ARM-LITE', icon: Cpu },
-  { label: 'UART', value: '115200 8N1', icon: Radio },
-  { label: 'RTOS Tick', value: '1ms', icon: Timer },
+  { label: 'Challenge', value: 'DAY 5/365', icon: Radio },
+  { label: 'Next Step', value: 'DAY 6', icon: Timer },
   { label: 'Telemetry', value: 'ONLINE', icon: Satellite },
-  { label: 'Memory Map', value: 'CLEAN', icon: MemoryStick },
-  { label: 'Interrupts', value: 'READY', icon: Zap },
+  { label: 'Learning Log', value: 'ACTIVE', icon: MemoryStick },
+  { label: 'Roadmap', value: 'READY', icon: Zap },
 ];
 
 export const resumeHighlights = [
-  'Embedded C and low-level programming foundation',
-  'Microcontroller protocol practice: UART, SPI, I2C, GPIO, timers, interrupts',
-  'RTOS learning path with scheduler and task-state experiments',
-  'Linux-first tooling mindset with GitHub-driven public progress',
+  'Started a 365-day embedded systems learning challenge',
+  'Completed the first 5 days and built a daily update workflow',
+  'Currently focusing on C fundamentals and disciplined learning logs',
+  'Future roadmap includes microcontrollers, Linux, protocols, and RTOS basics',
 ];
 
 export const engineeringQuote =

@@ -5,7 +5,7 @@ import EngineeringDashboard from '../components/EngineeringDashboard.jsx';
 import { heroActions } from '../data/portfolio.js';
 import { isExternalLink, scrollToHash } from '../utils/scroll.js';
 
-const roles = ['Embedded Engineer', 'Firmware Developer', 'C Programmer', 'RTOS Learner'];
+const roles = ['Embedded Learner', 'C Programmer', '365-Day Challenger', 'Future Firmware Developer'];
 
 function TypingRole() {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -68,7 +68,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-3xl font-display text-xl font-semibold text-slate-100 sm:text-2xl">
-            Embedded Systems Engineer | Firmware Developer | C Programmer
+            Embedded Systems Learner | C Programmer | Firmware Aspirant
           </p>
 
           <div className="mt-5">
@@ -76,8 +76,8 @@ export default function Hero() {
           </div>
 
           <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            A technical portfolio built like a firmware workstation: embedded C practice, microcontroller protocols,
-            RTOS learning, Linux workflows, and hardware-software integration presented as a cyberpunk engineering OS.
+            A technical portfolio built like a firmware workstation: currently tracking Day 5 of a 365-day embedded
+            systems challenge, with C fundamentals now and microcontrollers, Linux, protocols, and RTOS on the roadmap.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -101,8 +101,8 @@ export default function Hero() {
           <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
             {[
               ['CORE', 'Embedded C'],
-              ['BUS', 'UART/SPI/I2C'],
-              ['MODE', 'Bare-metal'],
+              ['STATUS', 'Day 5/365'],
+              ['MODE', 'Learning'],
             ].map(([label, value]) => (
               <div key={label} className="rounded border border-white/10 bg-white/[0.035] p-3">
                 <span className="block font-mono text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">{label}</span>
