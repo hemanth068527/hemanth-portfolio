@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="70%" cy="24%" r="65%">
+      <stop offset="0" stop-color="#27e8ff" stop-opacity=".35"/>
+      <stop offset=".38" stop-color="#66ff99" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#02040a"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#27e8ff" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#02040a"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="730" y="120" width="300" height="300" rx="34" fill="#07101f" stroke="#27e8ff" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M650 210h80M650 320h80M1030 210h92M1030 320h92M880 62v58M880 420v90" stroke="#66ff99" stroke-width="6" stroke-linecap="round"/>
+  <path d="M790 280h30l24-70 34 140 30-92 24 22h44" fill="none" stroke="#27e8ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="245" fill="#f8fbff" font-family="Space Grotesk, Arial" font-size="78" font-weight="700">Hemanth K</text>
+  <text x="96" y="318" fill="#27e8ff" font-family="JetBrains Mono, monospace" font-size="30">Embedded Systems Engineer</text>
+  <text x="96" y="374" fill="#66ff99" font-family="JetBrains Mono, monospace" font-size="26">Firmware Developer | C Programmer | RTOS Learner</text>
+</svg>
