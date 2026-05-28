@@ -906,6 +906,14 @@ body.cursor-active .custom-cursor-ring {
   background: #b46cff;
 }
 
+.resume-image {
+  width: 100%;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(39, 232, 255, 0.16);
+  background: #ffffff;
+  object-fit: contain;
+}
+
 .contact-form {
   display: grid;
   gap: 1rem;

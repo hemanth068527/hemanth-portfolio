@@ -17,15 +17,15 @@ export default function Contact() {
     <SectionShell
       id="contact"
       eyebrow="Contact Command Center"
-      title="Open channel for embedded opportunities."
-      subtitle="A command-center contact interface with availability state, social channels, and a form ready to connect to a production endpoint."
+      title="Open channel for projects, learning, and opportunities."
+      subtitle="A command-center contact interface with Hemanth's resume contact details, social channels, and a form ready to connect to a production endpoint."
     >
       <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
         <motion.div className="panel-surface" variants={fadeUp}>
           <div className="mb-6 flex items-center justify-between">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.26em] text-matrix">Availability</p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-white">Ready for firmware roles</h3>
+              <h3 className="mt-2 font-display text-2xl font-bold text-white">Open to projects and internships</h3>
             </div>
             <span className="h-3 w-3 animate-pulse rounded-full bg-matrix shadow-green" />
           </div>
@@ -65,7 +65,7 @@ export default function Contact() {
           </div>
           <label>
             <span>Subject</span>
-            <input required placeholder="Firmware opportunity, collaboration, or project" />
+            <input required placeholder="Internship, project, collaboration, or learning opportunity" />
           </label>
           <label>
             <span>Message</span>

@@ -17,6 +17,7 @@ import {
   MemoryStick,
   MonitorCog,
   Network,
+  Phone,
   Radio,
   Satellite,
   ShieldCheck,
@@ -50,8 +51,8 @@ export const navItems = [
 
 export const heroActions = [
   { label: 'Explore Projects', href: '#projects', tone: 'primary', icon: Cpu },
-  { label: 'Download Resume', href: '/resume-hemanth-k.pdf', tone: 'secondary', icon: Download },
-  { label: 'GitHub Profile', href: 'https://github.com/', tone: 'secondary', icon: Github },
+  { label: 'Download Resume', href: '/resume-hemanth-k.png', tone: 'secondary', icon: Download },
+  { label: 'GitHub Profile', href: 'https://github.com/hemanth068527', tone: 'secondary', icon: Github },
   { label: 'Contact Me', href: '#contact', tone: 'ghost', icon: Mail },
 ];
 
@@ -65,8 +66,8 @@ export const profileStats = [
 export const currentlyLearning = [
   { label: 'Daily C practice habit', progress: 5 },
   { label: 'Embedded fundamentals roadmap', progress: 4 },
-  { label: 'GitHub learning logs', progress: 5 },
-  { label: 'Microcontroller basics preparation', progress: 2 },
+  { label: 'Microcontroller project documentation', progress: 12 },
+  { label: 'IoT sensor integration notes', progress: 10 },
 ];
 
 export const skillGroups = [
@@ -75,9 +76,9 @@ export const skillGroups = [
     icon: Braces,
     accent: 'cyan',
     skills: [
-      { name: 'C', level: 12 },
-      { name: 'Embedded C', level: 5 },
-      { name: 'Python Basics', level: 8 },
+      { name: 'C', level: 18 },
+      { name: 'Python Basics', level: 12 },
+      { name: 'Embedded C Roadmap', level: 8 },
     ],
   },
   {
@@ -85,15 +86,15 @@ export const skillGroups = [
     icon: Cpu,
     accent: 'green',
     skills: [
-      { name: 'UART', level: 3 },
-      { name: 'SPI', level: 2 },
-      { name: 'I2C', level: 2 },
-      { name: 'GPIO', level: 3 },
-      { name: 'Timers', level: 2 },
-      { name: 'Interrupts', level: 2 },
-      { name: 'RTOS', level: 1 },
-      { name: 'ARM Basics', level: 2 },
-      { name: 'Bare-metal programming', level: 3 },
+      { name: 'Arduino', level: 28 },
+      { name: 'ESP32', level: 22 },
+      { name: 'Raspberry Pi Basics', level: 14 },
+      { name: 'Sensor Integration', level: 24 },
+      { name: 'IoT Data Acquisition', level: 20 },
+      { name: 'Wireless Basics', level: 14 },
+      { name: 'PCB Basics', level: 16 },
+      { name: 'Analog/Digital Circuits', level: 22 },
+      { name: 'Microcontroller Roadmap', level: 18 },
     ],
   },
   {
@@ -103,7 +104,9 @@ export const skillGroups = [
     skills: [
       { name: 'Git', level: 18 },
       { name: 'GitHub', level: 22 },
-      { name: 'Linux', level: 8 },
+      { name: 'Arduino IDE', level: 30 },
+      { name: 'MATLAB', level: 18 },
+      { name: 'Tinkercad', level: 24 },
       { name: 'VS Code', level: 30 },
       { name: 'CodeBlocks', level: 18 },
     ],
@@ -112,16 +115,29 @@ export const skillGroups = [
 
 export const radarSkills = [
   { axis: 'C Basics', value: 12 },
-  { axis: 'Debugging', value: 8 },
-  { axis: 'Protocols', value: 3 },
-  { axis: 'Linux', value: 8 },
-  { axis: 'RTOS', value: 1 },
+  { axis: 'Sensors', value: 24 },
+  { axis: 'IoT', value: 20 },
+  { axis: 'Circuits', value: 22 },
+  { axis: 'Tools', value: 26 },
   { axis: 'Git', value: 18 },
 ];
 
-export const projectCategories = ['All', 'C Programming', 'Firmware', 'RTOS', 'Protocols'];
+export const projectCategories = ['All', 'IoT', 'C Programming', 'Firmware', 'RTOS', 'Protocols'];
 
 export const projects = [
+  {
+    title: 'IoT Onion Storage Monitoring System',
+    category: 'IoT',
+    summary: 'Designed an IoT-based onion storage monitoring concept using environmental sensors to improve shelf life and reduce post-harvest losses.',
+    tech: ['Arduino/ESP32', 'Sensors', 'IoT', 'Data Logging'],
+    difficulty: 'Student Project',
+    status: 'Documented',
+    timeline: 'Academic project',
+    stats: { files: 'Report', lines: 'Sensors', commits: 'Learning' },
+    github: 'https://github.com/hemanth068527',
+    preview: '#',
+    signal: '0xIOT',
+  },
   {
     title: 'C Practice 365',
     category: 'C Programming',
@@ -259,6 +275,8 @@ export const certificates = [
 export const timeline = [
   { title: 'Started C Programming', date: 'Foundation', detail: 'Built the core mental model for memory, functions, arrays, pointers, and command-line problem solving.', icon: Binary },
   { title: 'GitHub Portfolio Creation', date: 'Version Control', detail: 'Organized repositories, daily coding logs, and public engineering progress.', icon: Github },
+  { title: 'ECE Engineering Foundation', date: '2024-2028', detail: 'Pursuing B.E. Electronics and Communication Engineering at Sona College of Engineering, Salem.', icon: GraduationCap },
+  { title: 'IoT Onion Storage Project', date: 'Academic Project', detail: 'Worked on sensor-based onion storage monitoring with Arduino/ESP32 concepts, data logging, and remote monitoring goals.', icon: Cpu },
   { title: '365 Days Embedded Challenge', date: 'Day 5', detail: 'Started the 365-day challenge and completed the first 5 daily learning sessions.', icon: Cpu },
   { title: 'First Firmware Project', date: 'Roadmap', detail: 'Planned as a future milestone after C fundamentals and embedded basics are stronger.', icon: MemoryStick },
   { title: 'RTOS Learning', date: 'Future Layer', detail: 'Long-term goal for the roadmap, not claimed as completed learning yet.', icon: Layers3 },
@@ -284,19 +302,20 @@ export const githubAnalytics = {
 };
 
 export const contactChannels = [
-  { label: 'Email', value: 'hemanth.k@example.com', href: 'mailto:hemanth.k@example.com', icon: Mail },
+  { label: 'Email', value: 'khemanth2801@gmail.com', href: 'mailto:khemanth2801@gmail.com', icon: Mail },
+  { label: 'Phone', value: '+91 93608 63735', href: 'tel:+919360863735', icon: Phone },
   { label: 'LinkedIn', value: 'linkedin.com/in/hemanth-k-094b96357', href: 'https://www.linkedin.com/in/hemanth-k-094b96357', icon: Network },
-  { label: 'GitHub', value: 'github.com/Hemanth-K', href: 'https://github.com/', icon: Github },
-  { label: 'Location', value: 'India - open to embedded roles', href: '#contact', icon: MapPin },
+  { label: 'GitHub', value: 'github.com/hemanth068527', href: 'https://github.com/hemanth068527', icon: Github },
+  { label: 'Location', value: 'Hosur / Salem, Tamil Nadu', href: '#contact', icon: MapPin },
 ];
 
 export const terminalCommands = {
   help: 'Available: help, skills, projects, github, resume, contact, clear',
-  skills: 'Currently building C basics, GitHub learning logs, and the 365-day embedded challenge habit.',
-  projects: 'Active: C Practice 365. Roadmap: number programs, GPIO, UART, RTOS after fundamentals.',
+  skills: 'ECE foundation, C basics, Python basics, Arduino, ESP32, sensors, IoT, MATLAB, Arduino IDE, Tinkercad.',
+  projects: 'Documented: IoT Onion Storage Monitoring System. Active: C Practice 365.',
   github: 'Open the GitHub dashboard section or connect repositories in src/data/portfolio.js.',
-  resume: 'Resume preview is available in the Resume section. Replace /resume-hemanth-k.pdf with the final PDF.',
-  contact: 'Email: hemanth.k@example.com | LinkedIn and GitHub links are wired in contactChannels.',
+  resume: 'Resume preview and download are available in the Resume section.',
+  contact: 'Email: khemanth2801@gmail.com | Phone: +91 93608 63735 | LinkedIn and GitHub links are wired.',
 };
 
 export const dashboardSignals = [
@@ -309,10 +328,31 @@ export const dashboardSignals = [
 ];
 
 export const resumeHighlights = [
-  'Started a 365-day embedded systems learning challenge',
-  'Completed the first 5 days and built a daily update workflow',
-  'Currently focusing on C fundamentals and disciplined learning logs',
-  'Future roadmap includes microcontrollers, Linux, protocols, and RTOS basics',
+  'Second-year ECE student at Sona College of Engineering, Salem',
+  'Current CGPA: 8.67 for B.E. Electronics and Communication Engineering',
+  'IoT onion storage monitoring project with sensor integration and Arduino/ESP32 concepts',
+  'Skills include C basics, Python basics, Arduino IDE, MATLAB, Tinkercad, analog/digital circuits, and IoT fundamentals',
+];
+
+export const education = [
+  {
+    degree: 'B.E - Electronics and Communication Engineering',
+    institution: 'Sona College of Engineering, Salem',
+    detail: 'Current CGPA: 8.67',
+    year: '2024-2028',
+  },
+  {
+    degree: 'HSC',
+    institution: 'St. Joseph Mat Hr Sec School, Hosur',
+    detail: 'Percentage: 77',
+    year: '2024',
+  },
+  {
+    degree: 'SSC',
+    institution: 'St. Joseph Mat Hr Sec School, Hosur',
+    detail: 'Percentage: 80',
+    year: '2022',
+  },
 ];
 
 export const engineeringQuote =

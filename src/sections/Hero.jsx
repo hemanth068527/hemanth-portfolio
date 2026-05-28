@@ -76,8 +76,8 @@ export default function Hero() {
           </div>
 
           <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            A technical portfolio built like a firmware workstation: currently tracking Day 5 of a 365-day embedded
-            systems challenge, with C fundamentals now and microcontrollers, Linux, protocols, and RTOS on the roadmap.
+            Second-year ECE student building a hands-on embedded path: IoT sensor projects, Arduino/ESP32 exposure,
+            C fundamentals, and Day 5 of a 365-day embedded systems challenge.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -100,9 +100,9 @@ export default function Hero() {
 
           <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
             {[
-              ['CORE', 'Embedded C'],
+              ['CORE', 'ECE + C'],
               ['STATUS', 'Day 5/365'],
-              ['MODE', 'Learning'],
+              ['PROJECT', 'IoT Sensors'],
             ].map(([label, value]) => (
               <div key={label} className="rounded border border-white/10 bg-white/[0.035] p-3">
                 <span className="block font-mono text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">{label}</span>

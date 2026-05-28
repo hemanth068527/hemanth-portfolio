@@ -21,12 +21,12 @@ export default function About() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-cyanCore">Embedded systems candidate</p>
           <h3 className="mt-4 font-display text-2xl font-bold text-white">Professional Engineering Summary</h3>
           <p className="mt-5 leading-8 text-slate-300">
-            Passionate embedded systems and low-level programming student who has started a 365-day embedded challenge.
-            The current focus is building strong C fundamentals, daily consistency, GitHub learning logs, and a roadmap
-            toward microcontrollers, Linux, protocols, RTOS, and firmware projects.
+            Second-year Electronics and Communication Engineering student with a strong interest in embedded systems,
+            IoT, and hardware-software integration. Currently building C fundamentals through a 365-day embedded
+            challenge while documenting practical exposure to microcontroller-based design and sensor integration.
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
-            {['365-day challenge', 'C fundamentals', 'Daily learning logs', 'GitHub consistency', 'Microcontroller roadmap', 'Firmware roadmap'].map(
+            {['ECE student', 'Arduino / ESP32', 'Sensor integration', 'IoT monitoring', 'C fundamentals', '365-day challenge'].map(
               (item) => (
                 <span key={item} className="skill-pill">
                   {item}

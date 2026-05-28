@@ -7,5 +7,10 @@ export function scrollToHash(hash) {
 }
 
 export function isExternalLink(href) {
-  return href.startsWith('http') || href.startsWith('mailto:') || href.endsWith('.pdf');
+  return (
+    href.startsWith('http') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:') ||
+    ['.pdf', '.png', '.jpg', '.jpeg'].some((extension) => href.endsWith(extension))
+  );
 }
