@@ -284,7 +284,7 @@ export const githubAnalytics = {
 
 export const contactChannels = [
   { label: 'Email', value: 'hemanth.k@example.com', href: 'mailto:hemanth.k@example.com', icon: Mail },
-  { label: 'LinkedIn', value: 'linkedin.com/in/hemanth-k', href: 'https://www.linkedin.com/', icon: Network },
+  { label: 'LinkedIn', value: 'linkedin.com/in/hemanth-k-094b96357', href: 'https://www.linkedin.com/in/hemanth-k-094b96357', icon: Network },
   { label: 'GitHub', value: 'github.com/Hemanth-K', href: 'https://github.com/', icon: Github },
   { label: 'Location', value: 'India - open to embedded roles', href: '#contact', icon: MapPin },
 ];
